@@ -1,4 +1,4 @@
-const convertButton = document.getElementById("#convert-button");
+const convertButton = document.querySelector("#convert-button");
 
 function convertCurrency(){
     console.log("funcionou");
