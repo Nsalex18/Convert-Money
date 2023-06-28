@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+body {
+    background-color: #99fcff;
+    background-image:
+        radial-gradient(at 68% 84%, hsla(260, 58%, 27%, 1) 0px, transparent 50%),
+        radial-gradient(at 16% 46%, hsla(340, 86%, 49%, 1) 0px, transparent 50%),
+        radial-gradient(at 83% 27%, hsla(235, 85%, 46%, 1) 0px, transparent 50%),
+        radial-gradient(at 62% 4%, hsla(9, 90%, 45%, 1) 0px, transparent 50%),
+        radial-gradient(at 8% 20%, hsla(325, 85%, 47%, 1) 0px, transparent 50%),
+        radial-gradient(at 51% 67%, hsla(199, 84%, 41%, 1) 0px, transparent 50%),
+        radial-gradient(at 34% 78%, hsla(289, 85%, 29%, 1) 0px, transparent 50%);
+}
+
+.logo {
+    width: 300px;
+    display: block;
+    margin: 50px auto;
+}
+
+main {
+    width: 375px;
+    border-radius: 20px;
+    background: #F4F4F4;
+    margin: 0 auto;
+    padding: 40px 23px 30px;
+}
+
+label {
+    color: #777;
+    font-size: 14px;
+
+}
+
+select,
+input {
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    height: 48px;
+    width: 100%;
+    background: #FFF;
+    margin-bottom: 24px;
+    appearance: none;
+    padding-left: 18px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+
+#convert-button {
+    border-radius: 5px;
+    background: #772FD3;
+    width: 100%;
+    border: none;
+    height: 48px;
+    color: #ffff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#convert-button:hover {
+    opacity: 0.8;
+}
+
+#convert-button:active {
+    opacity: 0.6;
+}
+
+section {
+    border-radius: 20px;
+    border: 1px solid #772FD3;
+    margin-top: 36px;
+    padding: 14px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow {
+    margin: 10px 0;
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.currency {
+    color: #777;
+    font-size: 14px;
+}
+
+.currency-value {
+    color: #555;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        overflow: scroll;
+    }
+}
+  
