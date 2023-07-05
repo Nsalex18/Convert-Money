@@ -1,5 +1,6 @@
 const convertButton = document.querySelector("#convert-button");
-const currencySelect = document.querySelector(".currency-select")
+const currencySelect = document.querySelector(".currency-select");
+const currencySelectToConvert = document.querySelector(".currency-select-to-convert");
 
 function convertCurrency() {
     const inputCurrencyValue = document.getElementById("input-currency").value;
@@ -10,8 +11,10 @@ function convertCurrency() {
     const dolartoday = 4.90;
     const eurotoday = 5.30;
     const libratoday = 6.15;
-    const bitcointoday = 149333.95; 
+    const bitcointoday = 149333.95;
     const ienetoday = 0.033;
+    const realtoday = 0.21;
+
 
     if (currencySelect.value == "Dolar") {  // se o select estiver selecionado o valor de dolar, entra aqui
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -28,34 +31,33 @@ function convertCurrency() {
 
     }
 
-    if (currencySelect.value == "Libra" ) {
+    if (currencySelect.value == "Libra") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
-            style: "currency" ,
+            style: "currency",
             currency: "GBP"
         }).format(inputCurrencyValue / libratoday);
     }
 
-    if (currencySelect.value == "Bitcoin" ) {
+    if (currencySelect.value == "Bitcoin") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
-            style: "currency" ,
+            style: "currency",
             currency: "BTC"
         }).format(inputCurrencyValue / bitcointoday);
     }
 
     if (currencySelect.value == "Iene") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("ja-JP", {
-            style: "currency" , 
-            currency:"JPY"
+            style: "currency",
+            currency: "JPY"
         }).format(inputCurrencyValue / ienetoday);
     }
 
-    if (currencySelect.value == "Real") {
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        }).format(inputCurrencyValue);
-    }
-      
+
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputCurrencyValue);
+
 }
 
 
@@ -74,8 +76,15 @@ function changeCurrency() {
         currencyImage.src = "./assets/Euro.png"
     }
 
+    if(currencySelect.value == "Real") {
+        currencyName.innerHTML = "Real Brasileiro"
+        currencyImage.src ="./assets/Real.png"
+    }
+
     convertCurrency()
 }
+
+
 
 currencySelect.addEventListener("change", changeCurrency);
 convertButton.addEventListener('click', convertCurrency);
