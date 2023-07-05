@@ -6,7 +6,7 @@ function convertCurrency() {
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert"); // Valor real
     const currencyValueConverted = document.querySelector(".currency-value"); // Outros Valores
 
-    
+
     const dolartoday = 4.90;
     const eurotoday = 5.30;
 
@@ -31,6 +31,7 @@ function convertCurrency() {
     }).format(inputCurrencyValue);
 
 }
+
 
 function changeCurrency() {
     const currencyName = document.getElementById("currency-name");
