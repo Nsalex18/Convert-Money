@@ -3,12 +3,15 @@ const currencySelect = document.querySelector(".currency-select")
 
 function convertCurrency() {
     const inputCurrencyValue = document.getElementById("input-currency").value;
-    const currencyValueToConvert = document.querySelector(".currency-value-to-convert"); // Valor real
+    const currencyValueToConvert = document.querySelector(".currency-value-to-convert"); // Valor 
     const currencyValueConverted = document.querySelector(".currency-value"); // Outros Valores
 
 
     const dolartoday = 4.90;
     const eurotoday = 5.30;
+    const libratoday = 6.15;
+    const bitcointoday = 149333.95; 
+    const ienetoday = 0.033;
 
     if (currencySelect.value == "Dolar") {  // se o select estiver selecionado o valor de dolar, entra aqui
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -25,11 +28,34 @@ function convertCurrency() {
 
     }
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue);
+    if (currencySelect.value == "Libra" ) {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
+            style: "currency" ,
+            currency: "GBP"
+        }).format(inputCurrencyValue / libratoday);
+    }
 
+    if (currencySelect.value == "Bitcoin" ) {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-UK", {
+            style: "currency" ,
+            currency: "BTC"
+        }).format(inputCurrencyValue / bitcointoday);
+    }
+
+    if (currencySelect.value == "Iene") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("ja-JP", {
+            style: "currency" , 
+            currency:"JPY"
+        }).format(inputCurrencyValue / ienetoday);
+    }
+
+    if (currencySelect.value == "Real") {
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue);
+    }
+      
 }
 
 
