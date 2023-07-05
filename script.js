@@ -76,9 +76,26 @@ function changeCurrency() {
         currencyImage.src = "./assets/Euro.png"
     }
 
-    if(currencySelect.value == "Real") {
+    if (currencySelect.value == "Libra") {
+        currencyName.innerHTML = "Libra"
+        currencyImage.src = "./assets/libra.png"
+    }
+
+    if (currencySelect.value == "Bitcoin") {
+        currencyName.innerHTML = "Bitcoin"
+        currencyImage.src = "./assets/bitcoin.png"
+    }
+
+    if (currencySelect.value == "Iene") {
+        currencyName.innerHTML = "Yen"
+        currencyImage.src = "./assets/japan.jpg"
+        currencyImage.width =  44;
+        currencyImage.heifht = 44;
+    }
+
+    if (currencySelect.value == "Real") {
         currencyName.innerHTML = "Real Brasileiro"
-        currencyImage.src ="./assets/Real.png"
+        currencyImage.src = "./assets/Yen.jpg"
     }
 
     convertCurrency()
