@@ -8,7 +8,6 @@ function convertCurrency() {
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert"); // Valor 
     const currencyValueConverted = document.querySelector(".currency-value"); // Outros Valores
  
-    console.log(inputCurrencyValue)
 
     const dolartoday = 4.90;
     const eurotoday = 5.30;
@@ -58,13 +57,13 @@ function convertCurrency() {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR",{
             style: "currency",
             currency: "BRL"
-        }).format(inputCurrencyValue)   
+        }).format(inputCurrencyValue / realtoday)   
     }
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL"
-    }).format(inputCurrencyValue / realtoday)
+    }).format(inputCurrencyValue)
 
     
 
