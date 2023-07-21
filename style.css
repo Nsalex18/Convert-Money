@@ -22,7 +22,7 @@ body {
     width: 350px;
     display: inline-block;
     margin: 90px 20px 0 190px;
-    
+
 
 }
 
@@ -31,7 +31,7 @@ main {
     height: 620px;
     border-radius: 20px;
     background: #F4F4F4;
-    margin: 15px 70px 25px 0 ; 
+    margin: 15px 70px 25px 0;
     padding: 25px 15px 18px;
     display: inline-block;
     float: right;
@@ -115,7 +115,8 @@ section {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.currency-value, .currency-value-to-convert {
+.currency-value,
+.currency-value-to-convert {
     color: #555;
     font-size: 17px;
     font-weight: 700;
@@ -123,7 +124,7 @@ section {
 }
 
 @media screen and (max-width: 500px) {
-   
+
     body {
         background-color: #99fcff;
         background-image:
@@ -136,33 +137,39 @@ section {
             radial-gradient(at 34% 78%, hsla(289, 85%, 29%, 1) 0px, transparent 50%);
     }
 
-   .logo {
+    .logo {
 
         width: 200px;
         display: block;
-        margin: 10px 70px 10px 70px;
+        margin: 50px auto;
         align-items: center;
-    
-   } 
-   
-   main {
+
+    }
+
+    main {
 
         width: 200px;
         border-radius: 20px;
         background: #F4F4F4;
-        margin: 25px 125px 30px 0 ; 
-        padding: 25px 15px 18px;
+        margin: 15px 100px 30px 0;
+        padding: 20px 15px 18px;
         display: block;
         align-items: center;
-       
+
     }
-   
-   
-   
+
+    #convert-button {
+        width: 100%;
+    }
+
+
     section {
 
         overflow: scroll;
     }
 
+    select,
+    input {
+        width: 100%;
+    }
 }
-  
