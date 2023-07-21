@@ -19,18 +19,19 @@ body {
 }
 
 .logo {
-    width: 300px;
+    width: 350px;
     display: inline-block;
-    margin: 150px 40px 30px 60px;
-    float: left;
+    margin: 90px 20px 0 190px;
+    
+
 }
 
 main {
     width: 350px;
-    height: 650px;
+    height: 620px;
     border-radius: 20px;
     background: #F4F4F4;
-    margin: 25px 70px 25px 0 ; 
+    margin: 15px 70px 25px 0 ; 
     padding: 25px 15px 18px;
     display: inline-block;
     float: right;
